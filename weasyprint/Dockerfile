@@ -31,7 +31,7 @@ RUN mkdir -p ${FUNCTION_DIR}
 # Install Lambda Runtime Interface Client for Python
 RUN python${RUNTIME_VERSION} -m pip install awslambdaric --target ${FUNCTION_DIR}
 
-RUN python${RUNTIME_VERSION} -m pip install weasyprint boto3 --target ${FUNCTION_DIR}
+RUN python${RUNTIME_VERSION} -m pip install weasyprint boto3 PyPDF2 --target ${FUNCTION_DIR}
 
 # Copy handler function
 COPY lambda_function.py ${FUNCTION_DIR}
