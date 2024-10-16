@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 import concurrent.futures
 import boto3
 import uuid
+from PyPDF2 import PdfMerger
 
 logger = logging.getLogger(__name__)
 s3 = boto3.client("s3")

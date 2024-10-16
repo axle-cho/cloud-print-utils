@@ -20,9 +20,9 @@ Build layer:
 Deploy layer:
 
     $ aws lambda publish-layer-version \
-        --region <region> \
-        --layer-name <name> \
-        --zip-file fileb://build/weasyprint-layer-python3.12.zip
+    --region us-east-1 \
+    --layer-name weasyprint-utils \
+    --zip-file fileb://build/weasyprint-layer-python3.12.zip
 
 Lambda must be configured with these env vars:
 

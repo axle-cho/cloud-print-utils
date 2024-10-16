@@ -45,7 +45,7 @@ $PIXBUF_BIN > /opt/lib/loaders.cache
 RUNTIME=$(grep AWS_EXECUTION_ENV "$LAMBDA_RUNTIME_DIR/bootstrap" | cut -d _ -f 5)
 export RUNTIME
 mkdir -p "/opt/python/lib/$RUNTIME/site-packages"
-python -m pip install "weasyprint" -t "/opt/python/lib/$RUNTIME/site-packages"
+python -m pip install "weasyprint" "PyPDF2" -t "/opt/python/lib/$RUNTIME/site-packages"
 
 cd /opt
 zip -r9 /out/layer.zip lib/* python/*
